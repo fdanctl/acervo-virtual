@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System Cultural</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS order matters -->
+  <link href="./css/base.css" rel="stylesheet" />
+  <link href="./css/components/buttons.css" rel="stylesheet" />
+  <link href="./css/components/badges.css" rel="stylesheet" />
+  <link href="./css/components/inputs.css" rel="stylesheet" />
+  <link href="./css/components/switch.css" rel="stylesheet" />
+  <link href="./css/components/tab-navigation.css" rel="stylesheet" />
+  <link href="./css/components/card.css" rel="stylesheet" />
+  <link href="./css/pages/design-system.css" rel="stylesheet" />
+  <link href="./css/utilities.css" rel="stylesheet" />
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="min-h-screen transition px-3 ph-2">
+    <div class="py-xl space-y-xl">
+      <!-- Header -->
+      <div class="flex flex-col gap-md md:flex-row md:items-center md:justify-between">
+        <div>
+          <h1 class="heading-display text-primary">Design System</h1>
+          <p class="text-subtitle mt-2">
+            Sistema de design sofisticado e cultural para gestão de acervo
+          </p>
+        </div>
+
+        <div class="theme-toggle">
+          <i data-lucide="sun"></i>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="switch-slider"></span>
+          </label>
+          <i data-lucide="moon"></i>
+        </div>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="">
+        <div class="tabs-list">
+          <button class="tab-trigger active" data-tab="colors">Cores</button>
+          <button class="tab-trigger" data-tab="typography">
+            Tipografia
+          </button>
+          <button class="tab-trigger" data-tab="components">
+            Componentes
+          </button>
+          <button class="tab-trigger" data-tab="badges">Labels</button>
+          <button class="tab-trigger" data-tab="icons">Ícones</button>
+          <button class="tab-trigger" data-tab="examples">Exemplos</button>
+        </div>
+
+        <!-- Colors Tab -->
+        <div class="tab-content" id="colors-content">
+          <div class="section">
+            <div class="section-header">
+              <h3 class="section-title flex items-center gap-sm">
+                <i data-lucide="palette"></i> Paleta de Cores
+              </h3>
+            </div>
+            <div class="section-content">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="
+                        background-color: var(--color-background);
+                        border: 1px solid var(--color-border);
+                      "></div>
+                  <div>
+                    <h4>Background</h4>
+                    <p class="text-sm text-muted">
+                      Fundo principal da interface
+                    </p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        #fdfcf9
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-background
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="background-color: var(--color-foreground)"></div>
+                  <div>
+                    <h4>Foreground</h4>
+                    <p class="text-sm text-muted">Texto e ícones principais</p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        #1c1c1c
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-foreground
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="background-color: var(--color-primary)"></div>
+                  <div>
+                    <h4>Primary</h4>
+                    <p class="text-sm text-muted">
+                      Verde profundo — ações primárias e destaque de marca
+                    </p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        #2e5e4e
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-primary
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="background-color: var(--color-accent)"></div>
+                  <div>
+                    <h4>Accent</h4>
+                    <p class="text-sm text-muted">
+                      Dourado cultural — acentos e ênfases sutis
+                    </p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-xs" style="border-radius: var(--radius-sm)">
+                        #c19a3f
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-accent
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="background-color: var(--color-muted-foreground)"></div>
+                  <div>
+                    <h4>Muted</h4>
+                    <p class="text-sm text-muted">
+                      Texto secundário e elementos discretos
+                    </p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        #6b7280
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-muted-foreground
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div class="color-swatch" style="background-color: var(--color-border)"></div>
+                  <div>
+                    <h4 class=" ">Border</h4>
+                    <p class="text-sm text-muted">Bordas, divisores e contornos</p>
+                    <div class="flex gap-1 mt-1">
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        #e0ded9
+                      </code>
+                      <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
+                        --color-border
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="separator" />
+
+              <div>
+                <h4 class="mb-md">Paleta de Gráficos</h4>
+                <div class="flex gap-sm">
+                  <div style="
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--color-primary);
+                        border-radius: var(--radius-lg);
+                      "></div>
+                  <div style="
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--color-accent);
+                        border-radius: var(--radius-lg);
+                      "></div>
+                  <div style="
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--color-success);
+                        border-radius: var(--radius-lg);
+                      "></div>
+                  <div style="
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--color-warning);
+                        border-radius: var(--radius-lg);
+                      "></div>
+                  <div style="
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--color-error);
+                        border-radius: var(--radius-lg);
+                      "></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography Tab -->
+        <div class="tab-content hidden" id="typography-content">
+          <div class="space-y-lg">
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title flex items-center gap-sm">
+                  <i data-lucide="type"></i> Tipografia
+                </h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-xl">
+                  <div class="space-y-md">
+                    <h3 class=" ">Famílias Tipográficas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                      <div class="space-y-sm">
+                        <h4 class=" ">Playfair Display</h4>
+                        <p class="text-muted">
+                          Títulos e cabeçalhos - Serif moderna e artística
+                        </p>
+                        <div class="space-y-sm">
+                          <h1 class=" ">Título Principal</h1>
+                          <h2 class=" ">Subtítulo</h2>
+                          <h3 class=" ">Cabeçalho de Seção</h3>
+                        </div>
+                      </div>
+                      <div class="space-y-sm">
+                        <h4 class="text-body">Inter</h4>
+                        <p class="text-muted">
+                          Texto corrido e UI - Clean e versátil
+                        </p>
+                        <div class="space-y-sm">
+                          <p class="text-body">Texto de parágrafo regular</p>
+                          <p class="text-body text-sm">
+                            Texto secundário menor
+                          </p>
+                          <!-- <label class="text-body">Label de formulário</label> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="separator" />
+
+                  <div class="space-y-md">
+                    <h3 class=" ">Hierarquia Tipográfica</h3>
+                    <div class="space-y-lg">
+                      <div class="heading-display">Display - 3.5rem</div>
+                      <h1 class=" ">H1 - Título Principal - 2.5rem</h1>
+                      <h2 class=" ">H2 - Subtítulo - 2rem</h2>
+                      <h3 class=" ">H3 - Cabeçalho de Seção - 1.5rem</h3>
+                      <h4 class=" ">H4 - Subcabeçalho - 1.25rem</h4>
+                      <h5 class=" ">H5 - Título Pequeno - 1.125rem</h5>
+                      <h6 class=" ">H6 - Label Grande - 1rem</h6>
+                      <p class="text-body">
+                        Parágrafo - Texto regular - 1rem
+                      </p>
+                      <p class="text-subtitle">
+                        Subtitle - Texto de apoio - 1.125rem
+                      </p>
+                      <!-- <label class="text-body">Label - Texto de formulário - 0.875rem</label> -->
+                      <p class="text-sm">Texto secundário menor - 0.875rem</p>
+                      <p class="text-caption">
+                        Caption - Texto auxiliar - 0.75rem
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Components Tab -->
+        <div class="tab-content hidden" id="components-content">
+          <div class="space-y-lg">
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title flex items-center gap-sm">
+                  <i data-lucide="mouse-pointer-2"></i> Botões
+                </h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-lg">
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-primary">Primário</button>
+                    <button class="btn-secondary">Secundário</button>
+                    <button class="btn-outline">Outline</button>
+                    <button class="btn-ghost">Ghost</button>
+                    <button class="btn-destructive">Destrutivo</button>
+                  </div>
+
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-primary" disabled>Disabled</button>
+                    <button class="btn-secondary" disabled>Disabled</button>
+                    <button class="btn-outline" disabled>Disabled</button>
+                    <button class="btn-ghost" disabled>Disabled</button>
+                    <button class="btn-destructive" disabled>Disabled</button>
+                  </div>
+
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-primary btn-sm">Pequeno</button>
+                    <button class="btn-primary">Padrão</button>
+                    <button class="btn-primary btn-lg">Grande</button>
+                  </div>
+
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-primary btn-sm">
+                      <i data-lucide="plus"></i> Com Ícone
+                    </button>
+                    <button class="btn-primary">
+                      <i data-lucide="plus"></i> Com Ícone
+                    </button>
+                    <button class="btn-primary btn-lg">
+                      <i data-lucide="plus"></i> Com Ícone
+                    </button>
+                  </div>
+
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-icon btn-primary btn-sm">
+                      <i data-lucide="plus"></i>
+                    </button>
+                    <button class="btn-icon btn-primary">
+                      <i data-lucide="plus"></i>
+                    </button>
+                    <button class="btn-icon btn-primary btn-lg">
+                      <i data-lucide="plus"></i>
+                    </button>
+                  </div>
+
+                  <div class="flex flex-wrap gap-md">
+                    <button class="btn-outline">
+                      <i data-lucide="download"></i> Exportar
+                    </button>
+                    <button class="btn-ghost">
+                      <i data-lucide="settings"></i> Configurar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Formulários</h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-md">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                    <div class="space-y-sm">
+                      <label>Título da Peça</label>
+                      <input class="input" placeholder="Digite o título..." />
+                    </div>
+                    <div class="space-y-sm">
+                      <label>Estado de Conservação</label>
+                      <div class="select">
+                        <div class="select-trigger">
+                          Selecione o estado
+                          <i data-lucide="chevron-down"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="search-bar">
+                    <input class="input" placeholder="Pesquisar no acervo..." style="padding-left: 40px" />
+                    <i data-lucide="search"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges Tab -->
+        <div class="tab-content hidden" id="badges-content">
+          <div class="space-y-lg">
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Estados de Conservação</h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-md">
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                    <div class="space-y-sm">
+                      <span class="badge badge-excellent">Excelente</span>
+                      <p class="text-sm text-muted">
+                        Estado perfeito de conservação
+                      </p>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-good">Bom</span>
+                      <p class="text-sm text-muted">
+                        Pequenos sinais de desgaste
+                      </p>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-fair">Razoável</span>
+                      <p class="text-sm text-muted">
+                        Necessita atenção moderada
+                      </p>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-poor">Fraco</span>
+                      <p class="text-sm text-muted">
+                        Requer intervenção urgente
+                      </p>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-critical">Crítico</span>
+                      <p class="text-sm text-muted">
+                        Estado crítico - ação imediata
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Estados de Status</h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-md">
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <div class="space-y-sm">
+                      <span class="badge badge-good"><i data-lucide="check-circle"></i>Ativo</span>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-excellent"><i data-lucide="check-circle"></i>Devolvido</span>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-poor"><i data-lucide="alert-circle"></i>Em atraso</span>
+                    </div>
+                    <div class="space-y-sm">
+                      <span class="badge badge-fair"><i data-lucide="info"></i>Pendente</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Variações de Badge</h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-md">
+                  <div class="flex flex-wrap gap-sm">
+                    <span class="badge badge-default">Padrão</span>
+                    <span class="badge badge-secondary">Secundário</span>
+                    <span class="badge badge-outline">Outline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icons Tab -->
+        <div class="tab-content hidden" id="icons-content">
+          <div class="space-y-lg">
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Biblioteca de Ícones</h3>
+                <p class="text-subtitle">
+                  Ícones principais utilizados no sistema
+                </p>
+              </div>
+              <div class="section-content">
+                <div style="
+                      display: grid;
+                      grid-template-columns: repeat(5, 1fr);
+                      row-gap: 2rem;
+                    ">
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="layout-grid"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">layout-grid</p>
+                      <p class="text-xs text-muted">Mudar layout</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="rows-3"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">row-3</p>
+                      <p class="text-xs text-muted">Mudar layout</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="eye"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">eye</p>
+                      <p class="text-xs text-muted">Visualizar detalhes</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="eye-off"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">eye-off</p>
+                      <p class="text-xs text-muted">Showing password</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="search"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">search</p>
+                      <p class="text-xs text-muted">Pesquisar</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="filter"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">filter</p>
+                      <p class="text-xs text-muted">Filtrar resultados</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="map-pin"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">map-pin</p>
+                      <p class="text-xs text-muted">Localização</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="calendar"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">calendar</p>
+                      <p class="text-xs text-muted">Datas</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="user"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">user</p>
+                      <p class="text-xs text-muted">Pessoas/Autores</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="download"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">download</p>
+                      <p class="text-xs text-muted">Exportar</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="settings"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">settings</p>
+                      <p class="text-xs text-muted">Configurações</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="plus"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">plus</p>
+                      <p class="text-xs text-muted">Adicionar</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="heart"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">heart</p>
+                      <p class="text-xs text-muted">Favoritos</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="star"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">star</p>
+                      <p class="text-xs text-muted">Destacar</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="copy"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">copy</p>
+                      <p class="text-xs text-muted">Copiar</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="amphora"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">amphora</p>
+                      <p class="text-xs text-muted">looks cool</p>
+                    </div>
+                  </div>
+                  <div class="text-center space-y-sm">
+                    <div class="icon-container">
+                      <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">chevron-down</p>
+                      <p class="text-xs text-muted">dropdowns</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Examples Tab -->
+        <div class="tab-content hidden" id="examples-content">
+          <div class="space-y-lg">
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Card de Peça do Acervo</h3>
+              </div>
+              <div class="section-content">
+                <div class="card">
+                  <div style="
+                        aspect-ratio: 16/9;
+                        background-color: var(--color-muted);
+                        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+                      "></div>
+                  <div class="card-content">
+                    <div>
+                      <h3 class=" ">Vaso Grego Antigo</h3>
+                      <p class="text-muted text-sm">
+                          INV89
+                      </p>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="calendar"></i>
+                      <span>450-430 a.C.</span>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="map-pin"></i>
+                      <span>Edifício Principal - Sala 1</span>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                      <span class="badge badge-excellent">Excelente</span>
+
+                      <button class="btn-outline btn-sm">Ver detalhes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Filtros e Pesquisa</h3>
+              </div>
+              <div class="section-content">
+                <div class="space-y-md">
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                    <div class="search-bar">
+                      <input class="input" placeholder="Pesquisar por título, autor, número de inventário"
+                        style="padding-left: 40px" />
+                      <i data-lucide="search"></i>
+                    </div>
+
+                    <div class="select">
+                      <div class="select-trigger">
+                        Estado de conservação
+                        <i data-lucide="chevron-down"></i>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select-trigger">
+                        Localização
+                        <i data-lucide="chevron-down"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="./js/tab-navigation.js"></script>
+  <script src="./js/theme-toggle.js"></script>
+</body>
+
+</html>
