@@ -135,15 +135,15 @@ img {
   --color-input: #1f1f1f;
 
   /* Conservation States - Dark */
-  --color-excellent: #10b981;
+  --color-excellent: #a7f3d0;
   --color-excellent-bg: #064e3b;
-  --color-good: #3b82f6;
+  --color-good: #bfdbfe;
   --color-good-bg: #1e3a8a;
-  --color-fair: #f59e0b;
+  --color-fair: #fde68a;
   --color-fair-bg: #92400e;
-  --color-poor: #ef4444;
+  --color-poor: #fecaca;
   --color-poor-bg: #991b1b;
-  --color-critical: #dc2626;
+  --color-critical: #fed7aa;
   --color-critical-bg: #7f1d1d;
 }
 
