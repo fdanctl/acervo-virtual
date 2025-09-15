@@ -44,22 +44,22 @@
 }
 
 /* ===== SPACING ===== */
-.space-y-xs>*+* {
+.space-y-xs > * + * {
   margin-top: var(--spacing-xs);
 }
 
-.space-y-sm>*+* {
+.space-y-sm > * + * {
   margin-top: var(--spacing-sm);
 }
 
-.space-y-md>*+* {
+.space-y-md > * + * {
   margin-top: var(--spacing-md);
 }
 
-.space-y-lg>*+* {
+.space-y-lg > * + * {
   margin-top: var(--spacing-lg);
 }
 
-.space-y-xl>*+* {
+.space-y-xl > * + * {
   margin-top: var(--spacing-xl);
 }

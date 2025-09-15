@@ -36,16 +36,16 @@
   border-radius: 50%;
 }
 
-.switch input:checked+.switch-slider {
+.switch input:checked + .switch-slider {
   background-color: var(--color-primary);
 }
 
-.switch input:checked+.switch-slider:before {
+.switch input:checked + .switch-slider:before {
   transform: translateX(20px);
 }
 
 .theme-toggle {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm)
+  gap: var(--spacing-sm);
 }
