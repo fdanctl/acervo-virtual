@@ -99,7 +99,9 @@
                   <div class="color-swatch" style="background-color: var(--color-foreground)"></div>
                   <div>
                     <h4>Foreground</h4>
-                    <p class="text-sm text-muted">Texto e ícones principais</p>
+                    <p class="text-sm text-muted">
+                      Texto e ícones principais
+                    </p>
                     <div class="flex gap-1 mt-1">
                       <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
                         #1c1c1c
@@ -169,7 +171,9 @@
                   <div class="color-swatch" style="background-color: var(--color-border)"></div>
                   <div>
                     <h4 class=" ">Border</h4>
-                    <p class="text-sm text-muted">Bordas, divisores e contornos</p>
+                    <p class="text-sm text-muted">
+                      Bordas, divisores e contornos
+                    </p>
                     <div class="flex gap-1 mt-1">
                       <code class="text-xs bg-muted px-2 py-1" style="border-radius: var(--radius-sm)">
                         #e0ded9
@@ -306,7 +310,7 @@
               </div>
               <div class="section-content">
                 <div class="space-y-lg">
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-primary">Primário</button>
                     <button class="btn-secondary">Secundário</button>
                     <button class="btn-outline">Outline</button>
@@ -314,7 +318,7 @@
                     <button class="btn-destructive">Destrutivo</button>
                   </div>
 
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-primary" disabled>Disabled</button>
                     <button class="btn-secondary" disabled>Disabled</button>
                     <button class="btn-outline" disabled>Disabled</button>
@@ -322,13 +326,13 @@
                     <button class="btn-destructive" disabled>Disabled</button>
                   </div>
 
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-primary btn-sm">Pequeno</button>
                     <button class="btn-primary">Padrão</button>
                     <button class="btn-primary btn-lg">Grande</button>
                   </div>
 
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-primary btn-sm">
                       <i data-lucide="plus"></i> Com Ícone
                     </button>
@@ -340,7 +344,7 @@
                     </button>
                   </div>
 
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-icon btn-primary btn-sm">
                       <i data-lucide="plus"></i>
                     </button>
@@ -352,7 +356,7 @@
                     </button>
                   </div>
 
-                  <div class="flex flex-wrap gap-md">
+                  <div class="">
                     <button class="btn-outline">
                       <i data-lucide="download"></i> Exportar
                     </button>
@@ -664,7 +668,7 @@
               <div class="section-header">
                 <h3 class="section-title">Card de Peça do Acervo</h3>
               </div>
-              <div class="section-content">
+              <div class="section-content flex">
                 <div class="card">
                   <div style="
                         aspect-ratio: 16/9;
@@ -674,9 +678,65 @@
                   <div class="card-content">
                     <div>
                       <h3 class=" ">Vaso Grego Antigo</h3>
-                      <p class="text-muted text-sm">
-                          INV89
-                      </p>
+                      <p class="text-muted text-sm">INV89</p>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="calendar"></i>
+                      <span>450-430 a.C.</span>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="map-pin"></i>
+                      <span>Edifício Principal - Sala 1</span>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                      <span class="badge badge-excellent">Excelente</span>
+
+                      <button class="btn-outline btn-sm">Ver detalhes</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div style="
+                        aspect-ratio: 16/9;
+                        background-color: var(--color-muted);
+                        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+                      "></div>
+                  <div class="card-content">
+                    <div>
+                      <h3 class=" ">Vaso Grego Antigo</h3>
+                      <p class="text-muted text-sm">INV89</p>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="calendar"></i>
+                      <span>450-430 a.C.</span>
+                    </div>
+
+                    <div class="card-info">
+                      <i data-lucide="map-pin"></i>
+                      <span>Edifício Principal - Sala 1</span>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                      <span class="badge badge-excellent">Excelente</span>
+
+                      <button class="btn-outline btn-sm">Ver detalhes</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div style="
+                        aspect-ratio: 16/9;
+                        background-color: var(--color-muted);
+                        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+                      "></div>
+                  <div class="card-content">
+                    <div>
+                      <h3 class=" ">Vaso Grego Antigo</h3>
+                      <p class="text-muted text-sm">INV89</p>
                     </div>
 
                     <div class="card-info">
@@ -723,6 +783,64 @@
                         Localização
                         <i data-lucide="chevron-down"></i>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Foto Card</h3>
+              </div>
+              <div class="section-content">
+                <div class="horizontal-scroll">
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
+                    </div>
+                  </div>
+
+                  <div class="img-card">
+                    <!-- img -->
+                    <div>
+                      <h5>Localization</h5>
                     </div>
                   </div>
                 </div>

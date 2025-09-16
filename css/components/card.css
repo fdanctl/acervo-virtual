@@ -7,6 +7,7 @@
   overflow: hidden;
   transition: box-shadow 0.2s ease;
   cursor: pointer;
+  width: 100%;
   max-width: 24rem;
 }
 
@@ -44,4 +45,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Foto Card */
+.horizontal-scroll {
+  user-select: none;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.horizontal-scroll > div {
+  display: inline-block;
+}
+
+.img-card {
+  aspect-ratio: 16/9;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  width: 100%;
+  max-width: 24rem;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.img-card > div:last-of-type {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  position: absolute;
+
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(10,10,10,0.90) 20%, transparent 100%);
+  transform: translateY(20%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  color: #f3f3f3;
+}
+
+.img-card:hover div:last-of-type {
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(10,10,10,0.90) 20%, transparent 100%);
+  transform: translateY(0);
 }
