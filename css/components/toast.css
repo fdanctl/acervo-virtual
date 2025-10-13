@@ -7,7 +7,7 @@
   flex-direction: column-reverse;
 }
 
-.toast-container:empty {
+#toast-container:empty {
   display: none;
 }
 
