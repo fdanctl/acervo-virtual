@@ -49,6 +49,7 @@
 
 /* Foto Card */
 .horizontal-scroll {
+  scrollbar-width: none;
   user-select: none;
   width: 100%;
   overflow-x: auto;

@@ -93,6 +93,20 @@
   font-size: 0.75rem;
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-clip {
+  text-overflow: clip;
+}
+
 /* Text colors */
 .text-primary {
   color: var(--color-primary);

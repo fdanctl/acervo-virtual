@@ -1,0 +1,19 @@
+#toast-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.toast-container:empty {
+  display: none;
+}
+
+/* TODO toast styling */
+.toast {
+  background-color: lime;
+}
+
+/* TODO toast animation */

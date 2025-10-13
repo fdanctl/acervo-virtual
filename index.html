@@ -20,11 +20,22 @@
   <link href="./css/components/switch.css" rel="stylesheet" />
   <link href="./css/components/tab-navigation.css" rel="stylesheet" />
   <link href="./css/components/card.css" rel="stylesheet" />
+  <link href="./css/components/toast.css" rel="stylesheet" />
   <link href="./css/pages/design-system.css" rel="stylesheet" />
   <link href="./css/utilities.css" rel="stylesheet" />
 
+  <script src="./js/tab-navigation.js" defer></script>
+  <script src="./js/theme-toggle.js" defer></script>
+  <script src="js/toast.js" defer></script>
+
   <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+
 </head>
 
 <body>
@@ -846,18 +857,26 @@
                 </div>
               </div>
             </div>
+
+            <div class="section">
+              <div class="section-header">
+                <h3 class="section-title">Toast</h3>
+              </div>
+              <div class="section-content">
+                <button class="btn-primary" onclick="sendToast('hello')">
+                  Toast
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Lucide -->
-  <script>
-    lucide.createIcons();
-  </script>
-  <script src="./js/tab-navigation.js"></script>
-  <script src="./js/theme-toggle.js"></script>
+  <!-- Toast block -->
+  <div id="toast-container"></div>
 </body>
 
 </html>
