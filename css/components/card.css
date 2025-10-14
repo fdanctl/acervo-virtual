@@ -49,15 +49,44 @@
 
 /* Foto Card */
 .horizontal-scroll {
+  position: relative;
   scrollbar-width: none;
   user-select: none;
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
+  line-height: 0;
 }
 
 .horizontal-scroll > div {
   display: inline-block;
+}
+
+.border-fade {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  height: 100%;
+  width: 16px;
+  line-height: 0;
+
+  transition: opacity 150ms ease, visibility 150ms ease;
+}
+
+.fade-left {
+  background-image: linear-gradient(to left, transparent, rgba(10,10,10,0.80));
+}
+
+.fade-right {
+  right: 0;
+  background-image: linear-gradient(to right, transparent, rgba(10,10,10,0.80));
+}
+
+.border-fade.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .img-card {
