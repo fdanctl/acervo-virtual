@@ -1,4 +1,5 @@
 #toast-container {
+  z-index: 100;
   position: fixed;
   right: 0;
   top: 0;
@@ -13,7 +14,47 @@
 
 /* TODO toast styling */
 .toast {
-  background-color: lime;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-card);
+  width: 18rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  overflow-x: hidden;
+
+  /* background: radial-gradient(circle at 10% 50%, blue, var(--color-card) 30%); */
+  background-color: red;
+}
+
+.toast > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-success);
+  padding: 0.25rem;
+  border-radius: 100%;
+  outline: 5px solid rgba(255, 255, 255, .3);
+
+}
+
+.toast svg {
+  /* color: color-mix(in srgb, blue 50%, rgba(255, 255, 255, 0.3) 50%); */
+  color: red;
+  stroke-width: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.toast > div:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--color-success);
 }
 
 /* TODO toast animation */
