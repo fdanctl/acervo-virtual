@@ -869,8 +869,14 @@
                 <h3 class="section-title">Toast</h3>
               </div>
               <div class="section-content">
-                <button class="btn-primary" onclick="sendToast('hello')">
-                  Toast
+                <button class="btn-primary" onclick="sendToast('success', 'title', 'message')">
+                  Toast success
+                </button>
+                <button class="btn-primary" onclick="sendToast('warning', 'title', 'message')">
+                  Toast warning
+                </button>
+                <button class="btn-primary" onclick="sendToast('error', 'title', 'message')">
+                  Toast error
                 </button>
               </div>
             </div>
@@ -881,18 +887,7 @@
   </div>
 
   <!-- Toast block -->
-  <div id="toast-container">
-    <div class="toast">
-      <div>
-        <i data-lucide="check"></i>
-      </div>
-      <div>
-        <h6>title</h6>
-        <p>lorem</p>
-      </div>
-      <div></div>
-    </div>
-  </div>
+  <div id="toast-container"></div>
 </body>
 
 </html>

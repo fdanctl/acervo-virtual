@@ -63,9 +63,15 @@ img {
   --color-border: #e0ded9;
   --color-input: #faf9f6;
 
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
+  /* #059669 */
+  --rgb-success: 5, 150, 105;
+  --color-success: rgba(var(--rgb-success), 1);
+  /* #d97706 */
+  --rgb-warning: 217, 119, 6;
+  --color-warning: rgba(var(--rgb-warning), 1);
+  /* #dc2626 */
+  --rgb-error: 220, 38, 38;
+  --color-error: rgba(var(--rgb-error), 1);
   --color-error-hover: #b91c1c;
 
   /* Conservation States */

@@ -6,13 +6,14 @@
   padding: 1rem;
   display: flex;
   flex-direction: column-reverse;
+  gap: 0.25rem;
+  overflow-x: hidden;
 }
 
 #toast-container:empty {
   display: none;
 }
 
-/* TODO toast styling */
 .toast {
   position: relative;
   display: flex;
@@ -23,9 +24,21 @@
   padding: 1rem;
   border-radius: var(--radius-md);
   overflow-x: hidden;
+  box-shadow: var(--shadow-xl);
 
-  /* background: radial-gradient(circle at 10% 50%, blue, var(--color-card) 30%); */
-  background-color: red;
+  opacity: 0;
+  transform: translate(100%, 0%);
+  transition: opacity 150ms ease,  transform 150ms ease;
+}
+
+.toast.transition-out {
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translate(0%, 0%);
 }
 
 .toast > div:first-child {
@@ -33,16 +46,11 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--color-success);
   padding: 0.25rem;
   border-radius: 100%;
-  outline: 5px solid rgba(255, 255, 255, .3);
-
 }
 
 .toast svg {
-  /* color: color-mix(in srgb, blue 50%, rgba(255, 255, 255, 0.3) 50%); */
-  color: red;
   stroke-width: 3px;
   width: 16px;
   height: 16px;
@@ -54,7 +62,76 @@
   left: 0;
   width: 100%;
   height: 0.3rem;
+
+  background-color: var(--color-card);
+  background-blend-mode: multiply; 
+}
+
+.toast.success {
+  background-image: radial-gradient(circle at 10% 40%,
+      rgba(var(--rgb-success), 0.15),
+      var(--color-card) 30%
+  );
+}
+
+.toast.success svg {
+  color: color-mix(in srgb,
+      var(--color-card) 50%,
+      rgba(var(--rgb-success), 0.55) 50%
+  );
+}
+
+.toast.success > div:first-child {
+  background-color: var(--color-success);
+  outline: 7px solid rgba(var(--rgb-success), 0.1);
+}
+
+.toast.success > div:last-child {
   background-color: var(--color-success);
 }
 
-/* TODO toast animation */
+.toast.warning {
+  background-image: radial-gradient(circle at 10% 40%,
+      rgba(var(--rgb-warning), 0.15),
+      var(--color-card) 30%
+  );
+}
+
+.toast.warning svg {
+  color: color-mix(in srgb,
+      var(--color-card) 50%,
+      rgba(var(--rgb-warning), 0.55) 50%
+  );
+}
+
+.toast.warning > div:first-child {
+  background-color: var(--color-warning);
+  outline: 7px solid rgba(var(--rgb-warning), 0.1);
+}
+
+.toast.warning > div:last-child {
+  background-color: var(--color-warning);
+}
+
+.toast.error {
+  background-image: radial-gradient(circle at 10% 40%,
+      rgba(var(--rgb-error), 0.15),
+      var(--color-card) 30%
+  );
+}
+
+.toast.error svg {
+  color: color-mix(in srgb,
+      var(--color-card) 50%,
+      rgba(var(--rgb-error), 0.55) 50%
+  );
+}
+
+.toast.error > div:first-child {
+  background-color: var(--color-error);
+  outline: 7px solid rgba(var(--rgb-error), 0.1);
+}
+
+.toast.error > div:last-child {
+  background-color: var(--color-error);
+}
