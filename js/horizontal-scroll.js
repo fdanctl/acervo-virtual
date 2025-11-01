@@ -6,6 +6,13 @@ let isDragging = false;
 let startX;
 let scrollLeft;
 
+const resizeObserver = new ResizeObserver(() => {
+  if (slider.scrollWidth > 0) {
+    borderR.classList.add("visible");
+  }
+});
+borderR && resizeObserver.observe(slider);
+
 slider.addEventListener("mousedown", (e) => {
   isDragging = true;
   startX = e.pageX - slider.offsetLeft;
@@ -28,7 +35,7 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-(borderL || borderR) &&
+!(!borderL || !borderR) &&
   slider.addEventListener("scroll", (e) => {
     const scrollLeft = e.target.scrollLeft;
     const maxScrollLeft = e.target.scrollWidth - e.target.clientWidth;

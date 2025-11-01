@@ -103,8 +103,9 @@
 .img-card > div:last-of-type {
   display: flex;
   flex-direction: column-reverse;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 30%;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md);
   position: absolute;
@@ -118,6 +119,5 @@
 
 .img-card:hover div:last-of-type {
   opacity: 1;
-  background: linear-gradient(0deg, rgba(10,10,10,0.90) 20%, transparent 100%);
   transform: translateY(0);
 }
