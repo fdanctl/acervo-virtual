@@ -3,6 +3,11 @@ const tabTriggers = document.querySelectorAll(".tab-trigger");
 const tabContents = document.querySelectorAll(".tab-content");
 
 tabTriggers.forEach((trigger) => {
+  // prevent the button being focused
+  trigger.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+  });
+
   trigger.addEventListener("click", () => {
     const targetTab = trigger.getAttribute("data-tab");
 

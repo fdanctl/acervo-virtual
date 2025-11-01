@@ -17,6 +17,13 @@ button,
   white-space: nowrap;
 }
 
+button:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: var(--shadow-focus) !important;
+}
+
+
 button svg,
 .btn svg {
   height: 1rem;
@@ -39,6 +46,7 @@ button:disabled,
   border-color: var(--color-primary);
 }
 
+.btn-primary:focus,
 .btn-primary:hover:not(:disabled) {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
@@ -50,6 +58,7 @@ button:disabled,
   border-color: var(--color-border);
 }
 
+.btn-secondary:focus,
 .btn-secondary:hover:not(:disabled) {
   background-color: var(--color-muted);
 }
@@ -60,6 +69,7 @@ button:disabled,
   border-color: var(--color-primary);
 }
 
+.btn-outline:focus,
 .btn-outline:hover:not(:disabled) {
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
@@ -71,6 +81,7 @@ button:disabled,
   border-color: transparent;
 }
 
+.btn-ghost:focus,
 .btn-ghost:hover:not(:disabled) {
   background-color: var(--color-muted);
 }
@@ -81,6 +92,11 @@ button:disabled,
   border-color: var(--color-error);
 }
 
+.btn-destructive:focus {
+  box-shadow: var(--shadow-focus-error) !important;
+}
+
+.btn-destructive:focus,
 .btn-destructive:hover:not(:disabled) {
   background-color: var(--color-error-hover);
   border-color: var(--color-error-hover);

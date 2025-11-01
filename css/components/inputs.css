@@ -16,7 +16,8 @@
 .input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74, 78, 105, 0.1);
+  box-shadow: var(--shadow-focus);
+  background-color: var(--color-input-focus);
 }
 
 .input::placeholder {
@@ -50,7 +51,7 @@
 .select-trigger:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74, 78, 105, 0.1);
+  box-shadow: var(--shadow-focus)
 }
 
 /* Icon Container */
